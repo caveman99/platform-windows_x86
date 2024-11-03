@@ -2,7 +2,7 @@
   "name": "windows_x86",
   "title": "Windows x86",
   "description": "Windows x86 (32-bit) is a metafamily of graphical operating systems developed and marketed by Microsoft. Using host OS (Windows, Linux 32/64 or Mac OS X) you can build native application for Windows x86 platform.",
-  "homepage": "https://registry.platformio.org/platforms/platformio/windows_x86",
+  "homepage": "https://github.com/meshtastic/platform-windows_x86",
   "license": "Apache-2.0",
   "keywords": [
     "dev-platform",
@@ -12,9 +12,22 @@
   "engines": {
     "platformio": "^6"
   },
+  "packages": {
+    "framework-portduino": {
+      "type": "framework",
+      "version": "https://github.com/meshtastic/framework-portduino.git#a7d95ec808ae5154cfb49ef293b330083c8f684d",
+      "optional": true
+    }
+  },
+  "frameworks": {
+    "arduino": {
+      "package": "framework-portduino",
+      "script": "builder/frameworks/arduino.py"
+    }
+  },  
   "repository": {
     "type": "git",
-    "url": "https://github.com/platformio/platform-windows_x86.git"
+    "url": "https://github.com/meshtastic/platform-windows_x86.git"
   },
   "version": "1.2.0",
   "packages": {
